@@ -1,0 +1,71 @@
+/* Loading Custom Font */
+@font-face {
+    font-family: 'NRT';
+    src: url('NRT-Reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-kurdish {
+    font-family: 'NRT', sans-serif;
+}
+
+/* Custom Scientific Hexagon Background Pattern */
+.bg-chemical-pattern {
+    background-color: #2e1065; /* Deep purple base */
+    background-image: radial-gradient(at 0% 0%, #6d28d9 0px, transparent 50%),
+                      radial-gradient(at 100% 100%, #4c1d95 0px, transparent 50%),
+                      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='104.28'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.08' d='M30 104.28L0 86.96V52.32L30 35L60 52.32V86.96L30 104.28z M30 69.28L0 51.96V17.32L30 0L60 17.32V51.96L30 69.28z'/%3E%3C/svg%3E");
+    background-size: 100% 100%, 100% 100%, 60px 104.28px;
+    background-attachment: fixed;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Subtle Entrance Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
